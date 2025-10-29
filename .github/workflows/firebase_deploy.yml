@@ -24,7 +24,7 @@ jobs:
 
       - name: Build APK (DEV Flavor)
         run: |
-          flutter build apk --flavor prod --target lib/main_prod.dart
+          flutter build apk --flavor dev --target lib/main_dev.dart
 
       - name: Install Firebase CLI
         run: curl -sL https://firebase.tools | bash
@@ -34,7 +34,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
         run: |
           firebase appdistribution:distribute \
-            build/app/outputs/flutter-apk/app-dev-release.apk \
+            build/app/outputs/apk/dev/debug/app-dev-debug.apk \
             --app ${{ secrets.FIREBASE_APP_ID_DEV }} \
             --groups testers \
             --release-notes "Automated deploy from GitHub Actions"
