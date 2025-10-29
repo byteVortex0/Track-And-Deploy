@@ -30,6 +30,14 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+        <!-- CleverTap Integration     -->
+        <meta-data
+            android:name="CLEVERTAP_ACCOUNT_ID"
+            android:value="YOUR_ACCOUNT_ID" />
+        <meta-data
+            android:name="CLEVERTAP_TOKEN"
+            android:value="YOUR_TOKEN" />
     </application>
     <!-- Required to query activities that can process text, see:
          https://developer.android.com/training/package-visibility and

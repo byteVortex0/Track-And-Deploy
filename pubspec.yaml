@@ -13,6 +13,8 @@ dependencies:
 
   cupertino_icons: ^1.0.8
   firebase_core: ^4.2.0
+  sentry_flutter: ^9.7.0
+  clevertap_plugin: ^3.5.3
 
 dev_dependencies:
   flutter_test:

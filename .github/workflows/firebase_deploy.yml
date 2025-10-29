@@ -3,7 +3,7 @@ name: Deploy Dev APK to Firebase App Distribution
 on:
   push:
     branches:
-      - mai
+      - mai # Edit this to your main branch name
 
 jobs:
   build-deploy:
