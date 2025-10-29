@@ -29,5 +29,5 @@ jobs:
           FIREBASE_APP_ID_DEV: ${{ secrets.FIREBASE_APP_ID }}
         run: |
           cd android
-          bundle install || echo "No Gemfile"
-          fastlane deploy
+          bundle install
+          bundle exec fastlane deploy
