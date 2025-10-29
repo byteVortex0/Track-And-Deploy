@@ -1,16 +1,35 @@
-# track_and_deploy
+# 🚀 Flutter CI/CD Training App
 
-A new Flutter project.
+This project is a lightweight Flutter demo application created for hands-on practice with modern development workflows and mobile deployment automations.
+There is only one screen in the app. The main purpose is not features, but learning how real production apps are built, deployed, monitored, and analyzed.
 
-## Getting Started
+## ✅ What I Practiced in This Project
 
-This project is a starting point for a Flutter application.
+## 📦 Flutter Flavors
+Separated environments for: </br>
+Dev </br>
+Prod </br>
 
-A few resources to get you started if this is your first Flutter project:
+Using different configuration files and environment-specific values.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## 🔄 CI/CD via GitHub Actions + Fastlane
+
+Automated workflow includes:
+Installing Flutter dependencies
+Building APK for release
+Uploading directly to Firebase App Distribution
+The pipeline runs on every push to the main branch.
+
+---
+
+## 📡 Marketing & Analytics Tools
+
+Integrated:
+Firebase for application distribution
+Sentry for error monitoring and crash reports
+CleverTap for event tracking and user behavior analytics
+All services are configured to work depending on the app flavor.
+
+#FlutterMentors3
