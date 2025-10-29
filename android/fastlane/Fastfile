@@ -9,7 +9,7 @@ platform :android do
       firebase_cli_token: ENV['FIREBASE_CLI_TOKEN'],
       groups: "testers", 
       android_artifact_type: "APK",
-      apk_path: "../build/app/outputs/apk/prod/release/app-prod-release.apk",
+      apk_path: "../build/app/outputs/flutter-apk/app-prod-release.apk",
       release_notes: "Automated deployment via Fastlane"
     )
   end

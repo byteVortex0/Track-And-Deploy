@@ -34,7 +34,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_CLI_TOKEN }}
         run: |
           firebase appdistribution:distribute \
-            build/app/outputs/apk/dev/debug/app-dev-debug.apk \
+            build/app/outputs/flutter-apk/app-dev-release.apk \
             --app ${{ secrets.FIREBASE_APP_ID_DEV }} \
             --groups testers \
             --release-notes "Automated deploy from GitHub Actions"
