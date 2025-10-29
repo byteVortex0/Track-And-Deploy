@@ -3,7 +3,7 @@ default_platform(:android)
 platform :android do
   desc "Deploy app to firebase app distribution"
   lane :deploy do
-    sh'flutter build apk --flavor prod -t lib/main_prod.dart'
+    sh'flutter build apk --flavor prod --target lib/main_prod.dart'
     firebase_app_distribution(
       app: ENV['FIREBASE_APP_ID'], 
       firebase_cli_token: ENV['FIREBASE_CLI_TOKEN'],
