@@ -3,7 +3,7 @@ name: Build APK and Upload Artifact
 on:
   push:
     branches:
-      - deploy
+      - main
 
 jobs:
   build:
@@ -15,13 +15,14 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: "stable"
+          flutter-version: "3.35.7"
+          channel: "stable"
 
       - name: Install dependencies
         run: flutter pub get
 
       - name: Build APK (DEV)
-        run: flutter build apk --flavor dev -t lib/main_dev.dart
+        run: flutter build apk --flavor dev --target lib/main_dev.dart
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4

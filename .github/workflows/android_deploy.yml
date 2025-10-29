@@ -3,7 +3,7 @@ name: Android Deploy via Fastlane
 on:
   push:
     branches:
-      - mai
+      - main
 
 jobs:
   build_and_deploy:
