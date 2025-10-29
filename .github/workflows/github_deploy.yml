@@ -1,0 +1,30 @@
+name: Build APK and Upload Artifact
+
+on:
+  push:
+    branches:
+      - deploy
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "stable"
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build APK (DEV)
+        run: flutter build apk --flavor dev -t lib/main_dev.dart
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dev-apk
+          path: build/app/outputs/flutter-apk/app-dev-release.apk
