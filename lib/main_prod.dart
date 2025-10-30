@@ -8,12 +8,10 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await SentryFlutter.init((options) {
-    options.dsn = 'YOUR_DSN_PROD';
-    options.environment = 'production';
-  });
-
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  runApp(const MyApp());
+  await SentryFlutter.init((options) {
+    options.dsn = 'YOUR_DSN_PROD';
+    options.sendDefaultPii = true;
+  }, appRunner: () => runApp(SentryWidget(child: const MyApp())));
 }
